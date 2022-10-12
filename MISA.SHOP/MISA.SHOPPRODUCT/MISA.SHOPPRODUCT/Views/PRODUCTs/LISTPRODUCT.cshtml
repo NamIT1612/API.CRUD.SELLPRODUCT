@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MISA.SHOPPRODUCT.Models.PRODUCT>
+@{
+    ViewBag.Title = "HIỆN THỊ SẢN PHẨM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="container  page-wrapper col-sm-3"style=" margin-right: 10px;margin-left:60px">
+            <div class="page-inner">
+                <div class="row">
+                    <div class="el-wrapper">
+                        <div class="box-up">
+                            <img class="img" src="~/Assets/img/@item.IMG" />
+                            <div class="img-info">
+                                <div class="info-inner">
+                                    <span class="p-name"> @item.NAMEPD</span>
+                                    <span class="p-company">Apple</span>
+                                    <span class="p-company">@item.YEARPRODUCT</span>
+                                    
+                                </div>
+                                <div class="a-size">Dung lượng : <span class="size">64GB , 128GB , 256GB , 520GB</span></div>
+                            </div>
+                        </div>
+
+                        <div class="box-down">
+                            <div class="h-bg">
+                                <div class="h-bg-inner"></div>
+                            </div>
+
+                            <a class="cart" href="~/CARTs/Create" @*href='@Url.Action("addCart", "CARTs", new {IDPD=@item.IDPD})'*@>
+                                @*<span class="price">@item.PRICE</span>*@
+                                <span class="price">@item.PRICE<span>VND</span></span>
+                                <span class="add-to-cart">
+                                    <span class="txt">Add in cart</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+

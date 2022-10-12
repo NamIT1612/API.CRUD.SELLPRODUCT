@@ -1,0 +1,8 @@
+﻿ul.mainmenu {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+    ul.mainmenu li {
+        margin-right:50px;
+    }

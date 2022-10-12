@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MISA.SHOPPRODUCT.Models.CLIENT>
+
+@{
+    ViewBag.Title = "KHÁCH HÀNG";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>KHÁCH HÀNG</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.US)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMBERPHONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BIRTHYEAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.US)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMBERPHONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BIRTHYEAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDCE }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDCE }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDCE })
+        </td>
+    </tr>
+}
+
+</table>

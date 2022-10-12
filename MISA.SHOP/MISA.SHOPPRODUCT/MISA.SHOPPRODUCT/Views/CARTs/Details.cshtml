@@ -1,0 +1,59 @@
+﻿@model MISA.SHOPPRODUCT.Models.CART
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>THÔNG TIN CHI TIẾT</h2>
+
+<div>
+    <h4>CART</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CLIENT.US)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLIENT.US)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT.NAMEPD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT.NAMEPD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SELLNUMBER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SELLNUMBER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATEBUY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATEBUY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUSCLIENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUSCLIENT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

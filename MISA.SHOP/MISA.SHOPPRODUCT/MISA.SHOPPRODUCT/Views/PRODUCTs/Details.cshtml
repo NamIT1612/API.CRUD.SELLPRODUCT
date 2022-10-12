@@ -1,0 +1,51 @@
+﻿@model MISA.SHOPPRODUCT.Models.PRODUCT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUCT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMEPD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMEPD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YEARPRODUCT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YEARPRODUCT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDPD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

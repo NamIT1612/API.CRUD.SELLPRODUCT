@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MISA.SHOPPRODUCT.Models.PRODUCT>
+
+@{
+    ViewBag.Title = "SẢN PHẨM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SẢN PHẨM</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMEPD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YEARPRODUCT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMEPD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRICE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YEARPRODUCT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDPD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDPD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDPD })
+        </td>
+    </tr>
+}
+
+</table>
